@@ -9,8 +9,7 @@ import android.support.annotation.IdRes
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
-import pl.com.booker.ui.base.components.LoginManager
-import pl.com.booker.ui.base.navigator.Navigator
+import pl.com.booker.injection.components.LoginManager
 import com.momedia.cargo.ui.login.LoginActivity
 import com.momedia.cargo.util.GpsTracker
 import com.payu.android.sdk.payment.PaymentService

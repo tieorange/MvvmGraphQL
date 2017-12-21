@@ -1,15 +1,13 @@
-package pl.com.booker.ui.base.modules
+package pl.com.booker.injection.modules
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import pl.com.booker.ui.base.qualifier.ChildFragmentManager
-import pl.com.booker.ui.base.scopes.PerFragment
-import com.momedia.cargo.ui.base.navigator.ActivityNavigator
-import com.momedia.cargo.ui.base.navigator.ChildFragmentNavigator
-import com.momedia.cargo.ui.base.navigator.FragmentNavigator
-import com.momedia.cargo.util.ErrorHandler
 import dagger.Module
 import dagger.Provides
+import pl.com.booker.ui.base.navigator.ChildFragmentNavigator
+import pl.com.booker.ui.base.navigator.FragmentNavigator
+import pl.com.booker.ui.base.qualifier.ChildFragmentManager
+import pl.com.booker.ui.base.scopes.PerFragment
 
 
 @Module

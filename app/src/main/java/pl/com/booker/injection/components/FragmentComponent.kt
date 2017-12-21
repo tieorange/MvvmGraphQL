@@ -1,8 +1,8 @@
-package pl.com.booker.ui.base.components
+package pl.com.booker.injection.components
 
-import pl.com.booker.injection.components.ActivityComponent
+import dagger.Component
 import pl.com.booker.injection.modules.ViewModelModule
-import pl.com.booker.ui.base.modules.FragmentModule
+import pl.com.booker.injection.modules.FragmentModule
 import pl.com.booker.ui.base.scopes.PerFragment
 
 

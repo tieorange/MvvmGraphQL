@@ -1,15 +1,14 @@
-package pl.com.booker.ui.base.components
+package pl.com.booker.injection.components
 
 import android.content.Context
 import android.content.res.Resources
-import com.momedia.cargo.data.remote.MyApi
-import pl.com.booker.ui.base.modules.AppModule
-import pl.com.booker.ui.base.modules.DataModule
-import pl.com.booker.ui.base.modules.NetModule
-import pl.com.booker.ui.base.qualifier.AppContext
-import pl.com.booker.ui.base.scopes.PerApplication
 import dagger.Component
 import pl.com.booker.data.remote.MyApi
+import pl.com.booker.ui.base.modules.AppModule
+import pl.com.booker.ui.base.modules.DataModule
+import pl.com.booker.injection.modules.NetModule
+import pl.com.booker.ui.base.qualifier.AppContext
+import pl.com.booker.ui.base.scopes.PerApplication
 
 
 @PerApplication

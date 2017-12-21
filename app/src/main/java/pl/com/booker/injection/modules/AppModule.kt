@@ -3,7 +3,7 @@ package pl.com.booker.ui.base.modules
 import android.app.Application
 import android.content.Context
 import android.content.res.Resources
-import pl.com.booker.ui.base.components.LoginManager
+import pl.com.booker.injection.components.LoginManager
 import pl.com.booker.ui.base.qualifier.AppContext
 import pl.com.booker.ui.base.scopes.PerApplication
 import dagger.Module

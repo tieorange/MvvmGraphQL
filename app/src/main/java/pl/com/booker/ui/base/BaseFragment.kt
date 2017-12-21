@@ -14,30 +14,14 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.momedia.cargo.BR
-import pl.com.booker.ui.base.components.DaggerFragmentComponent
-import pl.com.booker.ui.base.components.FragmentComponent
-import pl.com.booker.ui.base.modules.FragmentModule
-import pl.com.booker.ui.base.scopes.PerFragment
+import pl.com.booker.BR
+import pl.com.booker.injection.components.FragmentComponent
+import pl.com.booker.injection.modules.FragmentModule
 import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel
 import pl.com.booker.ui.base.viewmodel.NoOpViewModel
 import javax.inject.Inject
 
-/* Base class for Fragments when using a view model with data binding.
- * This class provides the binding and the view model to the subclass. The
- * view model is injected and the binding is created when the content view is set.
- * Each subclass therefore has to call the following code in onCreateView():
- *    if(viewModel == null) { getFragmentComponent().inject(this); }
- *    return setAndBindContentView(inflater, container, R.layout.my_fragment_layout, savedInstanceState);
- *
- * After calling these methods, the binding and the view model is initialized.
- * saveInstanceState() and restoreInstanceState() methods of the view model
- * are automatically called in the appropriate lifecycle events when above calls
- * are made.
- *
- * Your subclass must implement the MvvmView implementation that you use in your
- * view model. */
 abstract class BaseFragment<B : ViewDataBinding, V : MvvmView, VM : MvvmViewModel<V>> : Fragment() {
 
     protected lateinit var binding: B
@@ -47,7 +31,7 @@ abstract class BaseFragment<B : ViewDataBinding, V : MvvmView, VM : MvvmViewMode
         private set
 
     @CallSuper
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         viewModel.saveInstanceState(outState)
     }
@@ -73,8 +57,10 @@ abstract class BaseFragment<B : ViewDataBinding, V : MvvmView, VM : MvvmViewMode
     }
 
     /* Sets the content view, creates the binding and attaches the view to the view model */
-    protected fun setAndBindContentView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?,
-                                        @LayoutRes layoutResID: Int): View {
+    protected fun setAndBindContentView(
+            inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?,
+            @LayoutRes layoutResID: Int
+    ): View {
         binding = DataBindingUtil.inflate<B>(inflater, layoutResID, container, false)
         binding.setVariable(BR.vm, viewModel)
 

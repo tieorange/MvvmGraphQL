@@ -11,23 +11,13 @@ import android.support.annotation.LayoutRes
 import android.support.annotation.StringRes
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
-import com.appsee.Appsee
-import com.google.firebase.iid.FirebaseInstanceId
-import com.momedia.cargo.BR
-import com.momedia.cargo.MyApp
-import com.momedia.cargo.R
-import pl.com.booker.ui.base.components.ActivityComponent
-import pl.com.booker.ui.base.components.DaggerActivityComponent
-import pl.com.booker.ui.base.components.LoginManager
-import pl.com.booker.ui.base.modules.ActivityModule
-import pl.com.booker.ui.base.navigator.ActivityNavigator
+import pl.com.booker.BR
+import pl.com.booker.MyApp
+import pl.com.booker.injection.components.ActivityComponent
+import pl.com.booker.injection.modules.ActivityModule
 import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel
 import pl.com.booker.ui.base.viewmodel.NoOpViewModel
-import com.momedia.cargo.util.ErrorHandler
-import com.payu.android.sdk.payment.ui.LoginActivity
-import io.reactivex.android.schedulers.AndroidSchedulers
-import retrofit2.HttpException
 import javax.inject.Inject
 
 /* Base class for Activities when using a view model with data binding.

@@ -1,21 +1,16 @@
-package pl.com.booker.ui.base.components
+package pl.com.booker.injection.components
 
 import android.app.Activity
-import com.crashlytics.android.Crashlytics
-import com.momedia.cargo.MyApp
-import com.momedia.cargo.data.model.User
-import com.momedia.cargo.data.model.User.IndividualClientType
-import com.momedia.cargo.data.model.User.IndividualClientType.Individual
-import com.momedia.cargo.data.remote.UserToken
-import pl.com.booker.ui.base.scopes.PerApplication
 import com.orhanobut.hawk.Hawk
+import pl.com.booker.MyApp
+import pl.com.booker.ui.base.scopes.PerApplication
 import javax.inject.Inject
 
 @PerApplication
 class LoginManager
 @Inject
 constructor() {
-    fun saveCredentials(
+    /*fun saveCredentials(
             userToken: UserToken, email: String
     ) {
         Hawk.put(PREF_USER_EMAIL, email)
@@ -25,7 +20,7 @@ constructor() {
 
         Crashlytics.setUserEmail(email)
         Crashlytics.setUserIdentifier(userToken.userId.toString())
-    }
+    }*/
 
     fun clearCredentials() {
         Hawk.put(PREF_USER_TOKEN, "")
@@ -34,26 +29,6 @@ constructor() {
     private fun getToken(): String = Hawk.get(PREF_USER_TOKEN, "")
 
     fun getTokenWithBearer() = BEARER + getToken()
-
-    fun getClientUserType(): User.IndividualClientType {
-        return Hawk.get<IndividualClientType>(PREF_USER_TYPE, Individual)
-    }
-
-    fun isClientTypeIndividual(): Boolean {
-        return getClientUserType() == User.IndividualClientType.Individual
-    }
-
-    fun isClientTypeCompany(): Boolean {
-        return getClientUserType() == User.IndividualClientType.Driver
-    }
-
-    fun getCurrentOrderIdForPayU(): String? {
-        return Hawk.get<String>(PREF_ORDER_ID_PAYU)
-    }
-
-    fun setCurrentOrderIdForPayU(orderId: String) {
-        Hawk.put(PREF_ORDER_ID_PAYU, orderId)
-    }
 
     fun getFirebaseDeviceToken(): String? {
         val token = Hawk.get<String>(PREF_FIREBASE_DEVICE_TOKEN)
@@ -84,6 +59,5 @@ constructor() {
         const val PREF_FIREBASE_DEVICE_TOKEN = "firebaseToken"
 
         const val BEARER = "Bearer "
-
     }
 }

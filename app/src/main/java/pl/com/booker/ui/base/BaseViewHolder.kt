@@ -11,6 +11,8 @@ import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel
 import pl.com.booker.ui.base.viewmodel.NoOpViewModel
 import com.momedia.cargo.util.castWithUnwrap
+import pl.com.booker.BR
+import pl.com.booker.injection.components.ViewHolderComponent
 import javax.inject.Inject
 
 /* Copyright 2016 Patrick Löwenstein
