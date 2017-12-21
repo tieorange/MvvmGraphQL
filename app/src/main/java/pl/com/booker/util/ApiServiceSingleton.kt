@@ -1,9 +1,9 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import android.support.v4.app.FragmentActivity
-import com.momedia.cargo.MyApp
-import com.momedia.cargo.data.remote.MyApi
-import com.momedia.cargo.ui.base.navigator.ActivityNavigator
+import pl.com.booker.MyApp
+import pl.com.booker.data.remote.MyApi
+import pl.com.booker.ui.base.navigator.ActivityNavigator
 
 class ApiServiceSingleton
 private constructor(

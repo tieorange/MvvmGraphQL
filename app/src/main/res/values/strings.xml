@@ -4,4 +4,8 @@
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
     <string name="pricePlnFormat">%.2f zł</string>
+    <string name="no_internet">Nie ma Internetu</string>
+    <string name="not_found">Nie znaleziono</string>
+    <string name="validation_failed">Bląd walidacji</string>
+    <string name="server_not_responding">Serwer nie odpowiada</string>
 </resources>

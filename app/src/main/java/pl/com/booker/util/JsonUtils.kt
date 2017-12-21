@@ -1,4 +1,4 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken

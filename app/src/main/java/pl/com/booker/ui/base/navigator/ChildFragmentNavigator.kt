@@ -17,7 +17,7 @@ import android.support.v4.app.Fragment
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License. */
-class ChildFragmentNavigator(private val fragment: Fragment) : ActivityNavigator(fragment.activity), FragmentNavigator {
+class ChildFragmentNavigator(private val fragment: Fragment) : ActivityNavigator(fragment.activity!!), FragmentNavigator {
 
     override fun replaceChildFragment(@IdRes containerId: Int, fragment: Fragment, args: Bundle) {
         replaceFragmentInternal(this.fragment.childFragmentManager, containerId, fragment, null, args, false, null)

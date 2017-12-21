@@ -1,4 +1,4 @@
-package com.momedia.cargo.util.bindingadapter
+package pl.com.booker.util.bindingadapter
 
 import android.databinding.BindingAdapter
 import android.databinding.ObservableInt

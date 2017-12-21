@@ -1,8 +1,5 @@
-package com.momedia.cargo.util.extensions
+package pl.com.booker.util.extensions
 
-import com.mcxiaoke.koi.log.logd
-import org.joda.time.DateTime
-import org.joda.time.Days
 import java.util.*
 
 
@@ -25,6 +22,7 @@ fun Date.getMonthNumber(): Int {
 
     return calendar.get(Calendar.MONTH) + 1
 }
+/*
 
 fun Date.isFromLastMonth(): Boolean {
     return isLessThanXdays(30)
@@ -39,6 +37,7 @@ private fun Date.isLessThanXdays(days: Int): Boolean {
     logd("", "days: $days1")
     return days1 <= days
 }
+*/
 
 fun Date.differenceInDays(date: Date): Long {
     val today = Date()

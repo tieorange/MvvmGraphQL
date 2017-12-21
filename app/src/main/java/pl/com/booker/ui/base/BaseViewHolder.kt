@@ -4,15 +4,12 @@ import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import com.momedia.cargo.BR
-import pl.com.booker.ui.base.components.DaggerViewHolderComponent
-import pl.com.booker.ui.base.components.ViewHolderComponent
+import pl.com.booker.BR
+import pl.com.booker.injection.components.ViewHolderComponent
 import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel
 import pl.com.booker.ui.base.viewmodel.NoOpViewModel
-import com.momedia.cargo.util.castWithUnwrap
-import pl.com.booker.BR
-import pl.com.booker.injection.components.ViewHolderComponent
+import pl.com.booker.util.castWithUnwrap
 import javax.inject.Inject
 
 /* Copyright 2016 Patrick Löwenstein

@@ -1,10 +1,10 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import android.content.Context
 import com.mcxiaoke.koi.ext.toast
-import com.momedia.cargo.R
-import com.momedia.cargo.injection.scopes.PerActivity
-import com.momedia.cargo.ui.base.navigator.Navigator
+import pl.com.booker.R
+import pl.com.booker.injection.scopes.PerActivity
+import pl.com.booker.ui.base.navigator.Navigator
 import retrofit2.HttpException
 import java.net.UnknownHostException
 import javax.inject.Inject

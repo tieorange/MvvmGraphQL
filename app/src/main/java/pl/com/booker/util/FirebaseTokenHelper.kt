@@ -1,20 +1,15 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import android.content.Context
-import com.google.firebase.iid.FirebaseInstanceId
-import com.mcxiaoke.koi.log.logd
-import com.mcxiaoke.koi.log.loge
-import com.momedia.cargo.data.remote.MyApi
-import com.momedia.cargo.injection.components.LoginManager
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
+import pl.com.booker.data.remote.MyApi
+import pl.com.booker.injection.components.LoginManager
 
 class FirebaseTokenHelper(
         private val context: Context,
         private val loginManager: LoginManager,
         private val myApi: MyApi
 ) {
-    fun sendToServerAndReturnDisposable(): Disposable? {
+    /*fun sendToServerAndReturnDisposable(): Disposable? {
         val firebaseToken = FirebaseInstanceId.getInstance().token
 
         if (firebaseToken != null) {
@@ -30,5 +25,5 @@ class FirebaseTokenHelper(
                     )
         }
         return null
-    }
+    }*/
 }

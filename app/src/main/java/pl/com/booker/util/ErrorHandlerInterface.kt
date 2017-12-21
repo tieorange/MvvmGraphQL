@@ -1,4 +1,4 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 interface ErrorHandlerInterface {
     fun handleError(throwable: Throwable)

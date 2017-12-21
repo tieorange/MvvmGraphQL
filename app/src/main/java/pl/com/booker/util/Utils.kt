@@ -1,4 +1,4 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import android.content.Context
 import android.content.ContextWrapper

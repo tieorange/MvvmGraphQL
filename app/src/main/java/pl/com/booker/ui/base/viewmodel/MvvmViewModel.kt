@@ -2,7 +2,6 @@ package pl.com.booker.ui.base.viewmodel
 
 import android.databinding.Observable
 import android.os.Bundle
-import com.momedia.cargo.data.model.User
 import pl.com.booker.ui.base.view.MvvmView
 
 /* Copyright 2016 Patrick Löwenstein

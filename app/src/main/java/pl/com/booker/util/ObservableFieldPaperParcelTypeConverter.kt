@@ -1,4 +1,4 @@
-package com.momedia.cargo.util
+package pl.com.booker.util
 
 import android.databinding.ObservableField
 import android.os.Parcel

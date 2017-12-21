@@ -21,7 +21,7 @@ import android.support.annotation.CallSuper
 
 import pl.com.booker.ui.base.MvvmViewNotAttachedException
 import pl.com.booker.ui.base.view.MvvmView
-import com.momedia.cargo.util.getParcelable
+import pl.com.booker.util.getParcelable
 
 import javax.inject.Inject
 
