@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity
 import pl.com.booker.BR
 import pl.com.booker.MyApp
 import pl.com.booker.injection.components.ActivityComponent
+import pl.com.booker.injection.components.DaggerActivityComponent
 import pl.com.booker.injection.modules.ActivityModule
 import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel

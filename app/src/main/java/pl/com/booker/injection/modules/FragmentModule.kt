@@ -4,10 +4,10 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import dagger.Module
 import dagger.Provides
+import pl.com.booker.injection.qualifier.ChildFragmentManager
+import pl.com.booker.injection.scopes.PerFragment
 import pl.com.booker.ui.base.navigator.ChildFragmentNavigator
 import pl.com.booker.ui.base.navigator.FragmentNavigator
-import pl.com.booker.injection.qualifier.ChildFragmentManager
-import pl.com.booker.ui.base.scopes.PerFragment
 
 
 @Module

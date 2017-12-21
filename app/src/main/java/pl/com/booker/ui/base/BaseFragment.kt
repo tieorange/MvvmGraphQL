@@ -15,6 +15,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import pl.com.booker.BR
+import pl.com.booker.injection.components.DaggerFragmentComponent
 import pl.com.booker.injection.components.FragmentComponent
 import pl.com.booker.injection.modules.FragmentModule
 import pl.com.booker.ui.base.view.MvvmView

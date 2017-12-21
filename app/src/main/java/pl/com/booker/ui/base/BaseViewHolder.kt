@@ -5,6 +5,7 @@ import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import pl.com.booker.BR
+import pl.com.booker.injection.components.DaggerViewHolderComponent
 import pl.com.booker.injection.components.ViewHolderComponent
 import pl.com.booker.ui.base.view.MvvmView
 import pl.com.booker.ui.base.viewmodel.MvvmViewModel
