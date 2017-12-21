@@ -2,7 +2,6 @@ package pl.com.booker.util
 
 import android.content.Context
 import pl.com.booker.data.remote.MyApi
-import pl.com.booker.injection.components.LoginManager
 
 class FirebaseTokenHelper(
         private val context: Context,

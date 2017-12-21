@@ -2,8 +2,8 @@ package pl.com.booker.injection.components
 
 import dagger.Component
 import pl.com.booker.injection.modules.ViewModelModule
-import pl.com.booker.ui.base.modules.ViewHolderModule
-import pl.com.booker.ui.base.scopes.PerViewHolder
+import pl.com.booker.injection.modules.ViewHolderModule
+import pl.com.booker.injection.scopes.PerViewHolder
 
 
 @PerViewHolder

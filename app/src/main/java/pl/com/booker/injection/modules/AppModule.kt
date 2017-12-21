@@ -1,13 +1,13 @@
-package pl.com.booker.ui.base.modules
+package pl.com.booker.injection.modules
 
 import android.app.Application
 import android.content.Context
 import android.content.res.Resources
-import pl.com.booker.injection.components.LoginManager
-import pl.com.booker.ui.base.qualifier.AppContext
-import pl.com.booker.ui.base.scopes.PerApplication
 import dagger.Module
 import dagger.Provides
+import pl.com.booker.injection.qualifier.AppContext
+import pl.com.booker.injection.scopes.PerApplication
+import pl.com.booker.util.LoginManager
 
 
 /* Copyright 2016 Patrick Löwenstein

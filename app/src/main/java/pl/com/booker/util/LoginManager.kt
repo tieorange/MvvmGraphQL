@@ -1,9 +1,9 @@
-package pl.com.booker.injection.components
+package pl.com.booker.util
 
 import android.app.Activity
 import com.orhanobut.hawk.Hawk
 import pl.com.booker.MyApp
-import pl.com.booker.ui.base.scopes.PerApplication
+import pl.com.booker.injection.scopes.PerApplication
 import javax.inject.Inject
 
 @PerApplication

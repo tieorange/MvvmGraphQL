@@ -1,4 +1,4 @@
-package pl.com.booker.ui.base.qualifier
+package pl.com.booker.injection.qualifier
 
 import javax.inject.Qualifier
 

@@ -1,4 +1,4 @@
-package pl.com.booker.ui.base.scopes
+package pl.com.booker.injection.scopes
 
 import javax.inject.Scope
 

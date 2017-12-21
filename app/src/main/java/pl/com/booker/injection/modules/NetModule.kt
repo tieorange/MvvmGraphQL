@@ -12,8 +12,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import pl.com.booker.BuildConfig
 import pl.com.booker.MyApp
 import pl.com.booker.data.remote.MyApi
-import pl.com.booker.ui.base.qualifier.AppContext
-import pl.com.booker.ui.base.scopes.PerApplication
+import pl.com.booker.injection.qualifier.AppContext
+import pl.com.booker.injection.scopes.PerApplication
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

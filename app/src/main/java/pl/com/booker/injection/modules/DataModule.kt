@@ -1,4 +1,4 @@
-package pl.com.booker.ui.base.modules
+package pl.com.booker.injection.modules
 
 import dagger.Module
 

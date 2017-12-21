@@ -8,8 +8,8 @@ import dagger.Provides
 import pl.com.booker.injection.scopes.PerActivity
 import pl.com.booker.ui.base.navigator.ActivityNavigator
 import pl.com.booker.ui.base.navigator.Navigator
-import pl.com.booker.ui.base.qualifier.ActivityContext
-import pl.com.booker.ui.base.qualifier.ActivityFragmentManager
+import pl.com.booker.injection.qualifier.ActivityContext
+import pl.com.booker.injection.qualifier.ActivityFragmentManager
 
 
 @Module

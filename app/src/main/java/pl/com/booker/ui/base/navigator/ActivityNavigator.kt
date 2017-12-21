@@ -9,7 +9,7 @@ import android.support.annotation.IdRes
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
-import pl.com.booker.injection.components.LoginManager
+import pl.com.booker.util.LoginManager
 
 open class ActivityNavigator(protected val activity: FragmentActivity) : Navigator {
 
