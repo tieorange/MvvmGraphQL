@@ -10,6 +10,7 @@ import android.support.multidex.MultiDexApplication
 import com.orhanobut.hawk.Hawk
 import io.reactivex.plugins.RxJavaPlugins
 import pl.com.booker.injection.components.AppComponent
+import pl.com.booker.injection.components.DaggerAppComponent
 import pl.com.booker.injection.modules.AppModule
 import pl.com.booker.injection.modules.NetModule
 import timber.log.Timber
