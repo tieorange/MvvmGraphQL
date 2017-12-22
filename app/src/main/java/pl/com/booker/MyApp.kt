@@ -21,11 +21,7 @@ class MyApp : MultiDexApplication() {
         enableStrictMode()
 
         instance = this
-        RxJavaPlugins.setErrorHandler(
-                {
-                    Timber.e(it)
-                }
-        )
+        RxJavaPlugins.setErrorHandler({ Timber.e(it) })
 
         appComponent = DaggerAppComponent.builder()
                 .appModule(AppModule(this))
@@ -35,6 +31,11 @@ class MyApp : MultiDexApplication() {
         Timber.plant(Timber.DebugTree())
         Hawk.init(this).build()
 
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 
     private fun enableStrictMode() {
@@ -54,11 +55,6 @@ class MyApp : MultiDexApplication() {
                             .build()
             )
         }
-    }
-
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
     }
 
     companion object {

@@ -1,4 +1,4 @@
-package pl.com.booker
+package pl.com.booker.ui.main
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -7,12 +7,15 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import pl.com.booker.R
+import pl.com.booker.R.id
+import pl.com.booker.R.layout
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(layout.activity_main)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
@@ -32,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
     }

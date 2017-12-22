@@ -3,7 +3,7 @@ package pl.com.booker.injection.components
 import android.content.Context
 import android.support.v4.app.FragmentManager
 import dagger.Component
-import pl.com.booker.MainActivity
+import pl.com.booker.ui.main.MainActivity
 import pl.com.booker.injection.modules.ViewModelModule
 import pl.com.booker.injection.scopes.PerActivity
 import pl.com.booker.injection.modules.ActivityModule
