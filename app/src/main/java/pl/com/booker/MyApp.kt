@@ -2,12 +2,8 @@ package pl.com.booker
 
 import android.content.Context
 import android.content.res.Resources
-import android.os.StrictMode
-import android.os.StrictMode.ThreadPolicy.Builder
-import android.os.StrictMode.VmPolicy
 import android.support.multidex.MultiDex
 import android.support.multidex.MultiDexApplication
-import com.orhanobut.hawk.Hawk
 import io.reactivex.plugins.RxJavaPlugins
 import pl.com.booker.injection.components.AppComponent
 import pl.com.booker.injection.components.DaggerAppComponent
@@ -18,7 +14,6 @@ import timber.log.Timber
 class MyApp : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
-        enableStrictMode()
 
         instance = this
         RxJavaPlugins.setErrorHandler({ Timber.e(it) })
@@ -29,32 +24,11 @@ class MyApp : MultiDexApplication() {
                 .build()
 
         Timber.plant(Timber.DebugTree())
-        Hawk.init(this).build()
-
     }
 
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
         MultiDex.install(this)
-    }
-
-    private fun enableStrictMode() {
-        if (BuildConfig.DEBUG) {
-            StrictMode.setThreadPolicy(
-                    Builder()
-                            .detectAll()
-                            .penaltyLog()
-                            .penaltyDeath()
-                            .build()
-            )
-            StrictMode.setVmPolicy(
-                    VmPolicy.Builder()
-                            .detectAll()
-                            .penaltyLog()
-                            .penaltyDeath()
-                            .build()
-            )
-        }
     }
 
     companion object {
