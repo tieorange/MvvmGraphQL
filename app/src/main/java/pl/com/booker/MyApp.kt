@@ -8,7 +8,7 @@ import io.reactivex.plugins.RxJavaPlugins
 import pl.com.booker.injection.components.AppComponent
 import pl.com.booker.injection.components.DaggerAppComponent
 import pl.com.booker.injection.modules.AppModule
-import pl.com.booker.injection.modules.NetModule
+import pl.com.graphqldemo.injection.modules.NetModule
 import timber.log.Timber
 
 class MyApp : MultiDexApplication() {

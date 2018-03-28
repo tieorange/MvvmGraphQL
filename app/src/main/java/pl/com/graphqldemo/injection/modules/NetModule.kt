@@ -11,10 +11,10 @@ import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pl.com.graphqldemo.BuildConfig
+import pl.com.booker.BuildConfig
+import pl.com.booker.injection.qualifier.AppContext
+import pl.com.booker.injection.scopes.PerApplication
 import pl.com.graphqldemo.data.GraphQlClient
-import pl.com.graphqldemo.injection.qualifier.AppContext
-import pl.com.graphqldemo.injection.scopes.PerApplication
 import java.io.File
 
 @Module
@@ -61,7 +61,6 @@ class NetModule(@AppContext private val context: Context) {
                 .okHttpClient(okHttpClient)
                 .build()
     }
-
     @Provides
     @PerApplication
     internal fun provideGraphQlClient(apolloClient: ApolloClient): GraphQlClient {
