@@ -1,0 +1,35 @@
+mutation CreateUser($name: String!) {
+    createUser(name: $name) {
+        id
+        name
+    }
+}
+
+mutation CreateEvent($name: String!, $startDate: DateTime!, $endDate: DateTime!, $location: String!, $organizerId: ID!) {
+    createEvent(name: $name, startDate: $startDate, endDate: $endDate, location: $location, organizerId: $organizerId) {
+        id
+        name
+    }
+}
+
+mutation AttendEvent($eventId: ID!, $userId: ID!) {
+    addToAttends(attendsEventId: $eventId, attendeesUserId: $userId) {
+        attendsEvent {
+            id
+            attendees {
+                ...AttendeeDetails
+            }
+        }
+    }
+}
+
+mutation DontAttendEvent($eventId: ID!, $userId: ID!) {
+    removeFromAttends(attendsEventId: $eventId, attendeesUserId: $userId) {
+        attendsEvent {
+            id
+            attendees {
+                ...AttendeeDetails
+            }
+        }
+    }
+}

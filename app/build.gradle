@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.apollographql.android'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "pl.com.booker.booker"
+        applicationId "pl.com.graphqldemo"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
@@ -43,6 +45,11 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+}
+
+apollo {
+    customTypeMapping['DateTime'] = "java.util.Date"
+    customTypeMapping['Currency'] = "java.math.BigDecimal"
 }
 
 repositories {
@@ -110,6 +117,10 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "nz.bradcampbell:paperparcel-compiler:$paperParcelVersion"
     releaseCompile 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    compile 'com.apollographql.apollo:apollo-runtime:0.4.4'
+    compile 'com.apollographql.apollo:apollo-http-cache:0.4.4'
+    compile 'com.apollographql.apollo:apollo-rx2-support:0.4.4'
+    compile 'com.jakewharton:disklrucache:2.0.2'
 }
 
 gradle.projectsEvaluated {
@@ -117,5 +128,3 @@ gradle.projectsEvaluated {
         options.compilerArgs << "-Xmaxerrs" << "1500" // or whatever number you want
     }
 }
-
-apply plugin: 'kotlin-android-extensions'

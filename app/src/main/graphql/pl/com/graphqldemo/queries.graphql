@@ -1,0 +1,11 @@
+query AllEvents {
+    allEvents {
+        ...EventBasic
+    }
+}
+
+query GetEventDetails($eventId: ID!) {
+    event: Event(id: $eventId) {
+        ...EventDetails
+    }
+}

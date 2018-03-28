@@ -1,0 +1,17 @@
+﻿type Event @model {
+  id: ID! @isUnique
+  name: String!
+  startDate: DateTime!
+  endDate: DateTime!
+  location: String!
+  description: String
+  organizer: User! @relation(name: "Organizer")
+  attendees: [User!]! @relation(name: "Attends")
+}
+
+type User @model {
+  id: ID! @isUnique
+  name: String!
+  organises: [Event!]! @relation(name: "Organizer")
+  attends: [Event!]! @relation(name: "Attends")
+}

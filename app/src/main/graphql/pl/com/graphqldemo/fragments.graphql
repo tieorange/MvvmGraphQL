@@ -1,0 +1,34 @@
+fragment EventBasic on Event {
+    id
+    name
+    location
+    attendees {
+        id
+    }
+    organizer {
+        id
+    }
+}
+
+fragment EventDetails on Event {
+    id
+    name
+    location
+    organizer {
+        id
+        name
+    }
+    startDate
+    endDate
+    attendees {
+        ...AttendeeDetails
+    }
+}
+
+fragment AttendeeDetails on User {
+    id
+    name
+    _attendsMeta {
+        count
+    }
+}
