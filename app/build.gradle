@@ -7,11 +7,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "pl.com.graphqldemo"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -67,13 +67,9 @@ ext.daggerVersion = '2.14.1'
 ext.paperParcelVersion = '2.0.1'
 ext.gmsVersion = '11.8.0'
 
-kapt {
-    generateStubs = true
-}
-
 dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
-    debugCompile 'com.readystatesoftware.chuck:library:1.1.0'
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation('com.afollestad.material-dialogs:core:0.9.4.5') { exclude module: 'support-v13' }
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
@@ -111,20 +107,13 @@ dependencies {
     implementation "nz.bradcampbell:paperparcel:$paperParcelVersion"
     implementation "nz.bradcampbell:paperparcel-kotlin:$paperParcelVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
-    kapt "com.android.databinding:compiler:$gradlePluginVersion"
-    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.0.1'
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    kapt "nz.bradcampbell:paperparcel-compiler:$paperParcelVersion"
-    releaseCompile 'com.readystatesoftware.chuck:library-no-op:1.1.0'
-    compile 'com.apollographql.apollo:apollo-runtime:0.4.4'
-    compile 'com.apollographql.apollo:apollo-http-cache:0.4.4'
-    compile 'com.apollographql.apollo:apollo-rx2-support:0.4.4'
-    compile 'com.jakewharton:disklrucache:2.0.2'
-}
-
-gradle.projectsEvaluated {
-    tasks.withType(JavaCompile) {
-        options.compilerArgs << "-Xmaxerrs" << "1500" // or whatever number you want
-    }
+//    kapt "com.android.databinding:compiler:3.2.1"
+//    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.0.1'
+//    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+//    kapt "nz.bradcampbell:paperparcel-compiler:$paperParcelVersion"
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    implementation 'com.apollographql.apollo:apollo-runtime:0.4.4'
+    implementation 'com.apollographql.apollo:apollo-http-cache:0.4.4'
+    implementation 'com.apollographql.apollo:apollo-rx2-support:0.4.4'
+    implementation 'com.jakewharton:disklrucache:2.0.2'
 }
